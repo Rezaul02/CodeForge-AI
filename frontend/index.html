@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Agent UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">✦</div>
+        <span>AI Coder</span>
+      </div>
+
+      <button class="new-chat-btn">＋ New chat</button>
+      <div class="sidebar-section">
+  <div class="sidebar-title">Recent Chats</div>
+  <div id="historyList" class="history-list"></div>
+</div>
+
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Workflow Status</div>
+        <div class="status-list" id="statusList">
+          <div class="status-item" id="status-planner">Planner</div>
+          <div class="status-item" id="status-coder">Coder</div>
+          <div class="status-item" id="status-tester">Tester</div>
+          <div class="status-item" id="status-reviewer">Reviewer</div>
+          
+        </div>
+      </div>
+      <button class="clear-chat-btn" id="clearChatBtn">Clear history</button>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-area">
+      <div class="topbar">
+        <div class="topbar-left"></div>
+        <div class="topbar-right">
+          <button class="upgrade-btn">Upgrade</button>
+        </div>
+      </div>
+
+      <section class="hero-section" id="heroSection">
+        <h1 class="hero-title">Hi , what's the plan?</h1>
+
+        <div class="prompt-wrapper">
+          <div class="prompt-box">
+            <button class="plus-btn">＋</button>
+            <textarea id="userInput" placeholder="Ask your Multi-Agent Coder..."></textarea>
+            <div class="prompt-actions">
+              
+              <button id="sendBtn" class="send-btn">➜</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chat messages -->
+      <section class="chat-section hidden" id="chatSection">
+        <div class="chat-messages" id="chatMessages"></div>
+
+        <div class="bottom-input-bar">
+          <div class="prompt-box bottom-box">
+            <button class="plus-btn">＋</button>
+            <textarea id="userInputBottom" placeholder="Ask your Multi-Agent Coder..."></textarea>
+            <div class="prompt-actions">
+             
+              <button id="sendBtnBottom" class="send-btn">➜</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
